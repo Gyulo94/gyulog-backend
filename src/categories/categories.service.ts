@@ -21,10 +21,10 @@ export class CategoriesService {
 
   async subCreate(dto: CreateCategoryDto) {
     const parentCategory = await this.categoryRepository.findOne({
-      where: { id: dto.parentId },
+      where: { id: dto.parentsId },
     });
     return await this.subCategoryRepository.save({
-      parent: parentCategory,
+      parents: parentCategory,
       ...dto,
     });
   }

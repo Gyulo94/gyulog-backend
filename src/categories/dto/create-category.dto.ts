@@ -6,5 +6,5 @@ export class CreateCategoryDto {
   name: string;
 
   @IsOptional()
-  parentId: number;
+  parentsId: number;
 }

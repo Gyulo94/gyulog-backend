@@ -10,6 +10,6 @@ export class Category extends CommonEntity {
   @Column()
   name: string;
 
-  @OneToMany(() => SubCategory, (subCategory) => subCategory.parent)
-  subcategories: Category[];
+  @OneToMany(() => SubCategory, (subCategory) => subCategory.parents)
+  subcategories: SubCategory[];
 }
